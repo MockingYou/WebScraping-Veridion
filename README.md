@@ -15,7 +15,7 @@
 
    ```bash
    git clone https://github.com/your/repository.git
-
+	```
 ## Description
 
 	- The script fetches data such as phone numbers, social media links, and addresses from the provided list of websites. It utilizes asynchronous requests for improved performance. The data is then saved to a CSV file named - - scraped_data.csv. Additionally, it merges the scraped data with company names from another CSV file named sample-websites-company-names.csv, and saves the combined data to merged_data.csv.
@@ -45,6 +45,7 @@ This Node.js script facilitates indexing data from a CSV file into an Elasticsea
 
    ```bash
    git clone https://github.com/your/repository.git
+   ```
 
 ## Description
 
