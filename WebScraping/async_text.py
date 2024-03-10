@@ -33,10 +33,6 @@ async def get_response(session, urls):
                 else:
                     text = await resp.text(encoding='utf-8', errors='ignore')
             soup = BeautifulSoup(text, 'html5lib')
-            for style in soup.find_all("style"):
-                style.extract()
-            for script in soup.find_all("script"):
-                script.extract()
             elements = {
                 'contact': soup.find("a", href=re.compile(r'/contact\b')),
                 'social': soup.find("a", href=re.compile(r'/social\b'))

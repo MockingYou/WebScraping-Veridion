@@ -27,20 +27,6 @@ def get_initial_urls_from_csv(file_path):
             initial_urls.append(row[0]) 
     return initial_urls
 
-def extract_phone_number(text):
-    phone_index = text.find("Phone:")
-    if phone_index != -1:
-        phone_text = text[phone_index + len("Phone:"):]
-        return phone_text.strip()
-    return None
-
-def extract_address(text):
-    address_index = text.find("Address:")
-    if address_index != -1:
-        address_text = text[address_index + len("Address:"):]
-        return address_text.strip()
-    return None
-
 def get_links():
     links = []
     with open("WebScraping\sample-websites.csv", "r", encoding="utf8") as f:

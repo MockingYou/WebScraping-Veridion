@@ -18,8 +18,12 @@
    ```bash
    git clone [https://github.com/your/repository.git](https://github.com/MockingYou/WebScraping-Veridion.git)
    ```
+   cd WebScraping
    pip install aiohttp asyncio beautifulsoup4 pandas
+
+   cd ScrapingApi
    npm install 
+
 ## Description
 
 - The script fetches data such as phone numbers, social media links, and addresses from the provided list of websites. It utilizes asynchronous requests for improved performance. The data is then saved to a CSV file named - - scraped_data.csv. Additionally, it merges the scraped data with company names from another CSV file named sample-websites-company-names.csv, and saves the combined data to merged_data.csv.
@@ -47,6 +51,6 @@ The script consists of two main functions:
 
 ## Details
 
-The program connects to an elasticsearch server using the credentials from the config file and creates a new index with the data from the merged csv returned by the python program. The program also checks if the domain is already added in the list. 
+The program connects to an elasticsearch server using the credentials from the config file and creates a new index with the data from the merged csv returned by the python program. The program also checks if the domain is already added in the list to skip duplicates. 
 
 The elasticsearch data is then search using the api "/api/search" by calling the function searchData that created a new body for each entry added from the request body received by api and makes a match using regular expression for each value from the object and then the api returns the data returned by the elastic search as an object.
